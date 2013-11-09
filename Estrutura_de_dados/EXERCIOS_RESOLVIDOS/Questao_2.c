@@ -1,9 +1,9 @@
 #include<stdio.h>
-#include"TAD_Pilha_estatica.h"
+#include"TAD_COMPLETO/TAD_Pilha_estatica.h"
 
-/* 2.	Dada uma pilha contendo números inteiros quaisquer,
- construir uma função que coloca os pares na base da pilha e
- os ímpares no topo da pilha. Usar duas pilhas como auxiliares.*/
+/* 2.	Dada uma pilha contendo nï¿½meros inteiros quaisquer,
+ construir uma funï¿½ï¿½o que coloca os pares na base da pilha e
+ os ï¿½mpares no topo da pilha. Usar duas pilhas como auxiliares.*/
 
 typedef struct Item {
     TipoChave chave;
@@ -38,7 +38,7 @@ void divide_par_e_impar(TipoPilha_EsT *Pilha) {
     Item  *temp;
     aux = Pilha->topo;
     while(aux != -1) {
-        temp = (int) Pilha->itens[aux]; // devido ao nosso TAD abstrato o CAST e necessário para ter acesso ao dados da struct
+        temp = (int) Pilha->itens[aux]; // devido ao nosso TAD abstrato o CAST e necessï¿½rio para ter acesso ao dados da struct
         if((temp->chave % 2) ==0) {
             empilha_EsT(temp,&par);
         } else {
@@ -47,7 +47,7 @@ void divide_par_e_impar(TipoPilha_EsT *Pilha) {
         aux--;
     }
     inicia_Pilha_EsT(Pilha); // zerando a pilha
-    *Pilha = par; // não precisamos de loop para pegar a primeira pilha.
+    *Pilha = par; // nï¿½o precisamos de loop para pegar a primeira pilha.
     aux= impar.topo;
     while(aux != -1) {
         empilha_EsT(impar.itens[aux],Pilha); // pegando a segunda pilha

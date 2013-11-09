@@ -1,12 +1,12 @@
 
 #include<stdio.h>
-#include"TAD_Pilha_Encadeada.h"
-#include"TAD_Pilha_estatica.h"
-#include"TAD_Fila_Dinamica.h"
+#include"TAD_COMPLETO/TAD_Pilha_Encadeada.h"
+#include"TAD_COMPLETO/TAD_Pilha_estatica.h"
+#include"TAD_COMPLETO/TAD_Fila_Dinamica.h"
 
-/* 6.Construir uma função que troca de lugar o
-elemento que está no topo da pilha com o que
-está na base da pilha. Usar apenas uma pilha como auxiliar.*/
+/* 6.Construir uma funï¿½ï¿½o que troca de lugar o
+elemento que estï¿½ no topo da pilha com o que
+estï¿½ na base da pilha. Usar apenas uma pilha como auxiliar.*/
 
 typedef struct Item {
 	TipoChave chave;

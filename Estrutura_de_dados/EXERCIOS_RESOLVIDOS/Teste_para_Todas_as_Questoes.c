@@ -7,29 +7,28 @@
 
 
 #include <stdio.h>
-#include <ctype.h> // para utilizar algumas funçoes de conversão de dados
+#include <ctype.h> // para utilizar algumas funï¿½oes de conversï¿½o de dados
 #include <stdlib.h>
 #include <string.h>
-#include "TAD_ESD.h"  // permite a criação do TipoItem ,TipoChave e Apontador
-#include "TAD_Fila_Circular.h"
-#include "TAD_Fila_Dinamica.h"
-#include "TAD_Lista_Encadeada.h"
-#include "TAD_Lista_Estatica.h"
-#include "TAD_Pilha_Encadeada.h"
-#include "TAD_Pilha_Estatica.h"
+#include "TAD_COMPLETO/TAD_ESD.h"  // permite a criaï¿½ï¿½o do TipoItem ,TipoChave e Apontador
+#include "TAD_COMPLETO/TAD_Fila_Dinamica.h"
+#include "TAD_COMPLETO/TAD_Lista_Encadeada.h"
+#include "TAD_COMPLETO/TAD_Lista_Estatica.h"
+#include "TAD_COMPLETO/TAD_Pilha_Encadeada.h"
+#include "TAD_COMPLETO/TAD_Pilha_Estatica.h"
 
 typedef struct{
     TipoChave chave;   /* Estrutura que sera utlizada na maior parte dos exemplos
-                        por esse motivo ela está sendo compartilha*/
+                        por esse motivo ela estï¿½ sendo compartilha*/
 } Item;
 
-void inverte_pilha(TipoPilha_EsT *Pilha);// função para Questão 1
-void par_e_impar(TipoPilha_EsT *Pilha); // função para Questão 2
+void inverte_pilha(TipoPilha_EsT *Pilha);// funï¿½ï¿½o para Questï¿½o 1
+void par_e_impar(TipoPilha_EsT *Pilha); // funï¿½ï¿½o para Questï¿½o 2
 void imprime_pliha_EnC(TipoPilha_EnC Pilha);// imprime plilha encadeada
 void imprime_pliha_EsT (TipoPilha_EsT Pilha);// imprime plilha estatica
-TipoPilha_EnC inverte_ordenacao_pilha(TipoPilha_EnC *p1,TipoPilha_EnC *p2);// função para Questão 1
+TipoPilha_EnC inverte_ordenacao_pilha(TipoPilha_EnC *p1,TipoPilha_EnC *p2);// funï¿½ï¿½o para Questï¿½o 1
 int main(){
-	printf("\n  1.	Dada uma pilha P, construir uma função que inverte a ordem dos \n"
+	printf("\n  1.	Dada uma pilha P, construir uma funï¿½ï¿½o que inverte a ordem dos \n"
 			"elementos dessa pilha, utilizando apenas uma estrutura auxiliar. \n"
 			"Definir adequadamente a estrutura auxiliar e \n"
 			"prever a possibilidade da pilha estar vazia.\n\n");
@@ -47,9 +46,9 @@ int main(){
 
 	    system("pause");
 
-	    printf("\n 2.Dada uma pilha contendo números inteiros quaisquer, \n"
-	    		"construir uma função que coloca os pares na base da pilha\n"
-	    		" e os ímpares no topo da pilha. Usar duas pilhas como auxiliares. \n\n");
+	    printf("\n 2.Dada uma pilha contendo nï¿½meros inteiros quaisquer, \n"
+	    		"construir uma funï¿½ï¿½o que coloca os pares na base da pilha\n"
+	    		" e os ï¿½mpares no topo da pilha. Usar duas pilhas como auxiliares. \n\n");
 
 	       inicia_Pilha_EsT(&p1);
 
@@ -60,8 +59,8 @@ int main(){
 	       divide_par_e_impar(&p1);
 	       imprime_pliha_EsT(p1);
 	       system("pause");
-	       printf("\n 3.Dadas duas pilhas estáticas numéricas ordenadas crescentemente a\n"
-	    		   " partir do topo. Faça uma função que transfira os elementos \n"
+	       printf("\n 3.Dadas duas pilhas estï¿½ticas numï¿½ricas ordenadas crescentemente a\n"
+	    		   " partir do topo. Faï¿½a uma funï¿½ï¿½o que transfira os elementos \n"
 	    		   "dessas pilhas para uma terceira pilha, inicialmente vazia, \n"
 	    		   "de modo que ela fique ordenada decrescentemente com o maior valor no topo. \n\n");
 	       TipoPilha_EnC p3;
@@ -89,7 +88,7 @@ int main(){
 	return 0;
 }
 
-// função para Questão 1
+// funï¿½ï¿½o para Questï¿½o 1
 void inverte_pilha(TipoPilha_EsT *Pilha) {
    int aux;
     TipoItem itemAux[Pilha->topo];// estrutura auxiliar
@@ -105,7 +104,7 @@ void inverte_pilha(TipoPilha_EsT *Pilha) {
     }
 }
 
-///////////////////////////////////////////////////////////// função para Questão 2
+///////////////////////////////////////////////////////////// funï¿½ï¿½o para Questï¿½o 2
 void divide_par_e_impar(TipoPilha_EsT *Pilha) {
     if(pilha_EsT_Vazia(*Pilha))
         return;
@@ -117,7 +116,7 @@ void divide_par_e_impar(TipoPilha_EsT *Pilha) {
     Item  *temp;
     aux = Pilha->topo;
     while(aux != -1) {
-        temp = (int) Pilha->itens[aux]; // devido ao nosso TAD abstrato o CAST e necessário para ter acesso ao dados da struct
+        temp = (int) Pilha->itens[aux]; // devido ao nosso TAD abstrato o CAST e necessï¿½rio para ter acesso ao dados da struct
         if((temp->chave % 2) ==0) {
             empilha_EsT(temp,&par);
         } else {
@@ -126,7 +125,7 @@ void divide_par_e_impar(TipoPilha_EsT *Pilha) {
         aux--;
     }
     inicia_Pilha_EsT(Pilha); // zerando a pilha
-    *Pilha = par; // não precisamos de loop para pegar a primeira pilha.
+    *Pilha = par; // nï¿½o precisamos de loop para pegar a primeira pilha.
     aux= impar.topo;
     while(aux != -1) {
         empilha_EsT(impar.itens[aux],Pilha); // pegando a segunda pilha

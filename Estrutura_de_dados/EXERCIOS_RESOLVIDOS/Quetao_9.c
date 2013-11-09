@@ -2,9 +2,9 @@
 #include<stdlib.h>
 #include<ctype.h>
 #include<string.h>
-#include "TAD_ESD.h"
-#include"TAD_Lista_Encadeada.h"
-#include"TAD_Pilha_Encadeada.h"
+#include "TAD_COMPLETO/TAD_ESD.h"
+#include"TAD_COMPLETO/TAD_Lista_Encadeada.h"
+#include"TAD_COMPLETO/TAD_Pilha_Encadeada.h"
 /*9.Dada uma lista encadeada de caracteres formada por
 uma sequÃªncia alternada de letras e dÃ­gitos, construa um
  funcao que retorne uma lista na qual as letras sÃ£o mantidas na
@@ -61,14 +61,14 @@ void organiza_lista(TipoListaEncad *Lista) {
         return;
     Apontador aux;
     Item *temp,*temp1;
-    TipoListaEncad l_letra; // as letras irá para lista
-    TipoPilha_EnC p_digito;// os digitos serão colacados provisoriamente em uma pilha
+    TipoListaEncad l_letra; // as letras irï¿½ para lista
+    TipoPilha_EnC p_digito;// os digitos serï¿½o colacados provisoriamente em uma pilha
     Inicia_Pilha_Enc(&p_digito);
     inicia_Lista_Enc(&l_letra);
     aux= Lista->Primeiro;
     while(aux->Prox != NULL) {
         temp = aux->Prox->item;
-        if(isdigit(temp->carac)) { // verifica se é um digito
+        if(isdigit(temp->carac)) { // verifica se ï¿½ um digito
             Empilha_EnC(temp,&p_digito);
         } else {
             insere_Lista_Enc(temp,&l_letra);

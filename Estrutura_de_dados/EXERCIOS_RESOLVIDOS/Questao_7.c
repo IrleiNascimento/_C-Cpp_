@@ -1,10 +1,10 @@
 #include<stdio.h>
 #include<string.h>
-#include "TAD_ESD.h"
-#include "TAD_Pilha_Encadeada.h"
+#include "TAD_COMPLETO/TAD_ESD.h"
+#include "TAD_COMPLETO/TAD_Pilha_Encadeada.h"
 /* 7.Escreva um programa para ler uma frase e imprimi-la com as
  palavras invertidas (como um espelho). Exemplo:
- a frase "A pilha do gato" deve sair "A ahlip od otagï"*/
+ a frase "A pilha do gato" deve sair "A ahlip od otagï¿½"*/
 
 typedef struct {
 	char ch;

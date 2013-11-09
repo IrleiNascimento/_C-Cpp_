@@ -1,7 +1,7 @@
 
 #include<stdio.h>
-#include"TAD_Pilha_Encadeada.h"
-#include"TAD_Fila_Dinamica.h"
+#include"TAD_COMPLETO/TAD_Pilha_Encadeada.h"
+#include"TAD_COMPLETO/TAD_Fila_Dinamica.h"
 
 /* 5.Dada uma pilha P1 vazia e uma fila F1.
 Escreva uma fun��o que inverta a ordem dos elementos de F1.*/

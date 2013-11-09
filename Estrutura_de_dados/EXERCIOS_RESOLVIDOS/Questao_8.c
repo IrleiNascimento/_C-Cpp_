@@ -1,11 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#include "TAD_Pilha_Encadeada.h"
+#include "TAD_COMPLETO/TAD_Pilha_Encadeada.h"
 
-/* 8.Utilizando uma pilha, escreva um método que receba um
-número inteiro positivo no formato decimal e
-converte este número para o formato binário. Exemplos:*/
+/* 8.Utilizando uma pilha, escreva um mï¿½todo que receba um
+nï¿½mero inteiro positivo no formato decimal e
+converte este nï¿½mero para o formato binï¿½rio. Exemplos:*/
 
 
 typedef struct Item {

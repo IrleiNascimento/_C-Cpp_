@@ -1,7 +1,7 @@
 #include<stdio.h>
-#include"TAD_Pilha_Encadeada.h"
-#include"TAD_Pilha_Estatica.h"
-/* 4.Dadas duas pilhas P1 e P2. Faça uma função que transfira os
+#include"TAD_COMPLETO/TAD_Pilha_Encadeada.h"
+#include"TAD_COMPLETO/TAD_Pilha_Estatica.h"
+/* 4.Dadas duas pilhas P1 e P2. Faï¿½a uma funï¿½ï¿½o que transfira os
 elementos de P1 para P2, mantendo a mesma ordem dos elementos.*/
 
 typedef struct Item {
