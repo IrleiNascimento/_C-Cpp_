@@ -1,3 +1,9 @@
+/*
+ * 
+ *
+ *  
+ *      Author: Irlei
+ */
 #include<stdio.h>
 #define MAXTAM 10
 #define p system("pause")
