@@ -1,3 +1,15 @@
+/*
+
+Um deque é um conjunto ordenado de itens a partir do qual podem ser 
+eliminados itens em ambas as extremidades e podem ser inseridos itens nas duas extremidades. 
+Chame as duas extremidades de um deque left e right. Como um deque pode ser representado como um vetor em C? 
+Escreva quatro rotinas em C, 
+remvleft, remvright, insrtleft, insrtright
+para remover e inserir elementos nas extremidades esquerda e direita de um deque.
+Certifique-se de que as rotinas funcionem corretamente para o deque vazio e detectem o estouro
+
+*/
+
 #include<stdio.h>
 #define MAXTAM 20
 typedef int TipoChave;
