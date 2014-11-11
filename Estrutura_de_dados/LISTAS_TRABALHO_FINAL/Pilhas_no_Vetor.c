@@ -3,6 +3,12 @@
  *
  *  
  *      Author: Irlei
+ 
+ Elabore um método para manter duas pilhas dentro de um 
+ único vetor linear de modo que nenhuma das pilhas incorra em 
+ estouro até que toda a memória seja usada, e uma pilha inteira 
+ nunca seja deslocada para outro local dentro do vetor. Escreva rotinas em C, push1, push2, 
+ pop1 e pop2, para manipular as duas pilhas. (Dica: as duas pilhas crescem na direção da outra
  */
 #include<stdio.h>
 #define MAXTAM 10
