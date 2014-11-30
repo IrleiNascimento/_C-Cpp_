@@ -12,9 +12,9 @@ typedef struct {
 } TipoItem;
 typedef struct {
 	int tamanho; /* tamanho maximo do heap */
-	int ultimo; /*proxima posição disponivel no vetor*/
-	int *ptItem; /*vetor de endereços dos itens*/
-	int *prioridade; /* vetor das prioridades */
+	int ultimo; /*proxima posiÃ§Ã£o disponivel no vetor*/
+	int *ptItem; /*ponteiro para um vetor de endereÃ§os dos itens*/
+	int *prioridade; /*ponteiro para um vetor das prioridades */
 } Heap;
 Heap *constroi_Heap(int tam);
 void heap_insere(Heap* heap, TipoItem *item, int prioridade);
@@ -51,7 +51,7 @@ heapSort(h);
 
 }
 void imprime(Heap *heap) {
-	printf("\n dado          pri        posição\n");
+	printf("\n dado          pri        posiÃ§Ã£o\n");
 	int i;
 	for (i = 0; i < heap->ultimo; i++) {
 		TipoItem *temp = heap->ptItem[i];
@@ -130,10 +130,10 @@ void corrige_abaixo(Heap* heap, int posicao) {
 }
 void altera_prioridade(Heap* heap, int posicao, int pdNova) {
 	if (posicao >= heap->ultimo) {
-		printf("Posicao não existe");
+		printf("Posicao nÃ£o existe");
 		return;
 	} else if (heap->prioridade[posicao] == pdNova) {
-		printf("A prioridade é igual a %d ", pdNova);
+		printf("A prioridade Ã© igual a %d ", pdNova);
 	}
 	int temp = heap->prioridade[posicao];
 	heap->prioridade[posicao] = pdNova;
